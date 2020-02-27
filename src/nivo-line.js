@@ -5,11 +5,13 @@ const MyResponsiveLine = ({ data /* see data tab */ }) => (
     <ResponsiveLine
         data={data}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-        xScale={{ type: 'point' }}
-        yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
+        xScale={{ type: 'time', format: '%s' }}
+        xFormat="time:%s"
+        yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false }}
         axisTop={null}
         axisRight={null}
         axisBottom={{
+            format: '%s',
             orient: 'bottom',
             tickSize: 5,
             tickPadding: 5,
